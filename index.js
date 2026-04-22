@@ -15,7 +15,7 @@ require('http')
 
 // ===== ENV =====
 const token = "8624512553:AAEvrYI1UIhjDJfLrYvTqjfQV7FPy1NtpE4";
-const const ADMIN_ID = Number(process.env.ADMIN_ID || 8529520909);
+const const ADMIN_ID = Number(process.ADMIN_ID || 8529520909);
 
 const bot = new TelegramBot(token, { polling: true });
 
