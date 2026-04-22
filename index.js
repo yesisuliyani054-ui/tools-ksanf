@@ -14,7 +14,7 @@ require('http')
   .listen(PORT);
 
 // ===== ENV =====
-const token = process.env.8624512553:AAEvrYI1UIhjDJfLrYvTqjfQV7FPy1NtpE4;
+const token = process.env."8624512553:AAEvrYI1UIhjDJfLrYvTqjfQV7FPy1NtpE4";
 const ADMIN_ID = process.env.8529520909;
 
 const bot = new TelegramBot(token, { polling: true });
@@ -363,3 +363,16 @@ require('http')
   .listen(process.env.PORT || 3000);
 
 console.log("Server hidup");
+
+const TelegramBot = require("node-telegram-bot-api");
+
+// fallback biar tetap jalan walau env gagal
+const token = process.env.BOT_TOKEN || "8624512553:AAEvrYI1UIhjDJfLrYvTqjfQV7FPy1NtpE4";
+
+console.log("TOKEN:", token);
+
+const bot = new TelegramBot(token, { polling: true });
+
+bot.on("message", (msg) => {
+  bot.sendMessage(msg.chat.id, "Bot aktif 🚀");
+});
