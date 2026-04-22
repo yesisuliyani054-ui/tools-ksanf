@@ -14,7 +14,7 @@ require('http')
   .listen(PORT);
 
 // ===== ENV =====
-const token = process.env."8624512553:AAEvrYI1UIhjDJfLrYvTqjfQV7FPy1NtpE4";
+const token = "8624512553:AAEvrYI1UIhjDJfLrYvTqjfQV7FPy1NtpE4";
 const ADMIN_ID = process.env.8529520909;
 
 const bot = new TelegramBot(token, { polling: true });
