@@ -349,3 +349,12 @@ bot.onText(/\/setvip (.+)/, (msg, match) => {
     saveDB();
     bot.sendMessage(msg.chat.id, "✅ Harga diupdate");
 });
+const http = require('http');
+
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  res.end("Bot Running");
+}).listen(PORT);
+
+console.log("Bot Running...");
