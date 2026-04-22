@@ -358,3 +358,8 @@ http.createServer((req, res) => {
 }).listen(PORT);
 
 console.log("Bot Running...");
+require('http')
+  .createServer((req, res) => res.end("OK"))
+  .listen(process.env.PORT || 3000);
+
+console.log("Server hidup");
