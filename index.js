@@ -1,4 +1,4 @@
-sanf`ord stok kalo gabut:
+
 const TelegramBot = require('node-telegram-bot-api');
 const {
     default: makeWASocket,
