@@ -1,5 +1,5 @@
 {
-  "name": "wa-telegram-bot",
+  "name": "bot-wa",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,15 +10,5 @@
     "node-telegram-bot-api": "^0.64.0",
     "pino": "^8.0.0",
     "fs-extra": "^11.1.1"
-  }
-}
-{
-  "users": {},
-  "senders": [],
-  "admin": [],
-  "payment": [],
-  "vipPrice": {
-    "mingguan": 10000,
-    "bulanan": 30000
   }
 }
