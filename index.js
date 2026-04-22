@@ -13,11 +13,35 @@ require('http')
   .createServer((req, res) => res.end("Bot Running"))
   .listen(PORT);
 
-// ===== ENV =====
-const token = "8624512553:AAEvrYI1UIhjDJfLrYvTqjfQV7FPy1NtpE4";
-const const ADMIN_ID = Number(process.ADMIN_ID || 8529520909);
+const TelegramBot = require("node-telegram-bot-api");
 
+// ===============================
+// TOKEN (WAJIB GANTI)
+// ===============================
+const token = "8624512553:AAEvrYI1UIhjDJfLrYvTqjfQV7FPy1NtpE4";
+
+// ===============================
+// ADMIN ID (FIX TANPA ENV)
+// ===============================
+const ADMIN_ID = 8529520909;
+
+// ===============================
 const bot = new TelegramBot(token, { polling: true });
+
+console.log("✅ Bot running...");
+
+// ===============================
+// TEST BOT
+// ===============================
+bot.on("message", (msg) => {
+  console.log("USER ID:", msg.from.id);
+
+  if (msg.from.id === ADMIN_ID) {
+    bot.sendMessage(msg.chat.id, "Halo Admin 👑");
+  } else {
+    bot.sendMessage(msg.chat.id, "User biasa");
+  }
+});
 
 // ===== DATABASE =====
 if (!fs.existsSync("./database.json")) {
